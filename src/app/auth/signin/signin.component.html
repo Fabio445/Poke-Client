@@ -1,1 +1,17 @@
-<p>signin works!</p>
+<h1>SIGN IN</h1>
+
+<form (submit)="signIn()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <button type="submit">Sign In</button>
+    <p>
+        Don't have an account? <a routerLink="/signup">Sign up here</a>
+      </p>
+  </form>
+  
