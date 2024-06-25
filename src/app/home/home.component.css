@@ -1,0 +1,20 @@
+body {
+    padding-top: 20px;
+  }
+  
+  .table-wrapper {
+    max-height: 400px; /* Altezza massima della tabella */
+    overflow-y: auto;  /* Abilita lo scrolling verticale */
+  }
+  
+  .pokemon-image {
+    width: 50px; /* Dimensione dell'immagine dei Pokémon */
+    height: auto;
+  }
+  
+  .page-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
