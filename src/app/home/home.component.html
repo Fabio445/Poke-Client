@@ -1,6 +1,6 @@
 <!-- Intestazione della pagina -->
 <div class="container-fluid bg-light py-3">
-  <h1 class="text-center">POKEKOLLECT</h1>
+  <h1 class="text-center"><a routerLink="/home">POKEKOLLECT</a></h1>
   <nav class="nav justify-content-center">
     <a class="nav-link active" aria-current="page" href="#">PokeKollect</a>
     <a class="nav-link" href="#">DexPoke</a>
@@ -24,20 +24,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let pokemon of paginatedPokemons">
+            <tr *ngFor="let pokemon of pokemons">
               <td>{{ pokemon.name }}</td>
               <td>{{ pokemon.type }}</td>
               <td><img [src]="pokemon.image" alt="Image of {{ pokemon.name }}" class="pokemon-image"></td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <div class="d-flex justify-content-between align-items-center mt-2">
-        <button class="btn btn-primary" *ngIf="currentPage > 1" (click)="onPageChange(currentPage - 1)">Previous</button>
-        <div class="page-info mx-auto">
-          Page {{ currentPage }} of {{ totalPages }}
-        </div>
-        <button class="btn btn-primary ml-auto" *ngIf="currentPage < totalPages" (click)="onPageChange(currentPage + 1)">Next</button>
       </div>
     </div>
   </div>
