@@ -1,21 +1,26 @@
-<h1>SIGN UP</h1>
+<div class="page-container">
+  <header class="header">
+    <h1>POKEKOLLECT</h1>
+  </header>
 
-<form (submit)="signUp()">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" [(ngModel)]="username" name="username" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" [(ngModel)]="password" name="password" required>
-    </div>
-    <div>
-      <label for="confirmPassword">Confirm Password:</label>
-      <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
-    </div>
-    <a><button type="submit">Sign Up</button></a>
-      <p>
+  <div class="signup-container">
+    <form (submit)="signUp()" class="signup-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+      <p class="signin-link">
         Already have an account? <a routerLink="/signin">Sign in</a>
       </p>
-  </form>
-  
+    </form>
+  </div>
+</div>

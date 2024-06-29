@@ -1,17 +1,22 @@
-<h1>SIGN IN</h1>
+<div class="page-container">
+  <header class="header">
+    <h1>POKEKOLLECT</h1>
+  </header>
 
-<form (submit)="signIn()">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" [(ngModel)]="username" name="username" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" [(ngModel)]="password" name="password" required>
-    </div>
-    <button type="submit">Sign In</button>
-    <p>
+  <div class="signin-container">
+    <form (submit)="signIn()" class="signin-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <p class="signup-link">
         Don't have an account? <a routerLink="/signup">Sign up here</a>
       </p>
-  </form>
-  
+    </form>
+  </div>
+</div>

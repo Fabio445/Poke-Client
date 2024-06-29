@@ -1,20 +1,64 @@
-body {
-    padding-top: 20px;
-  }
-  
-  .table-wrapper {
-    max-height: 400px; /* Altezza massima della tabella */
-    overflow-y: auto;  /* Abilita lo scrolling verticale */
-  }
-  
-  .pokemon-image {
-    width: 50px; /* Dimensione dell'immagine dei Pokémon */
-    height: auto;
-  }
-  
-  .page-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+/* Stili della navbar */
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  margin-bottom: 10px; /* Spazio tra titolo e navigazione */
+  font-size: 36px; /* Dimensione del titolo */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centra i link orizzontalmente */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px; /* Spazio tra i link */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Stili delle card dei Pokémon */
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 10vw; /* Altezza immagine proporzionale alla larghezza */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-title {
+  margin-bottom: 0;
+}

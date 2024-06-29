@@ -1,36 +1,25 @@
-<!-- Intestazione della pagina -->
-<div class="container-fluid bg-light py-3">
-  <h1 class="text-center"><a routerLink="/home">POKEKOLLECT</a></h1>
-  <nav class="nav justify-content-center">
-    <a class="nav-link active" aria-current="page" href="#">PokeKollect</a>
-    <a class="nav-link" href="#">DexPoke</a>
-    <a class="nav-link" href="#">Squads</a>
-    <a class="nav-link" href="#">StorePoke</a>
-    <a class="nav-link" href="#">Kredit Store</a>
+<!-- Intestazione della pagina con titolo e navigazione -->
+<div class="navbar-container">
+  <h1 class="navbar-title"><a routerLink="/home" class="navbar-link">POKEKOLLECT</a></h1>
+  <div class="nav navbar-nav">
+  <nav class="nav navbar-nav">
+    <a class="nav-link" routerLink="/dexpoke">DexPoke</a>
+    <a class="nav-link" routerLink="/squads">Squads</a>
+    <a class="nav-link" routerLink="/storepoke">StorePoke</a>
+    <a class="nav-link" routerLink="/kreditstore">Kredit Store</a>
   </nav>
 </div>
+</div>
 
-<!-- Sezione della tabella -->
+<!-- Sezione delle Card dei Pokémon -->
 <div class="container mt-4">
-  <div class="row justify-content-end">
-    <div class="col-12 col-md-8 col-lg-6">
-      <div class="table-wrapper">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let pokemon of pokemons">
-              <td>{{ pokemon.name }}</td>
-              <td>{{ pokemon.type }}</td>
-              <td><img [src]="pokemon.image" alt="Image of {{ pokemon.name }}" class="pokemon-image"></td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="row">
+    <div *ngFor="let pokemon of pokemons" class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+      <div class="card pokemon-card">
+        <img class="card-img-top" [src]="pokemon.image || 'assets/pokefleeing.webp'" alt="Image of {{ pokemon.name }}">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+        </div>
       </div>
     </div>
   </div>
