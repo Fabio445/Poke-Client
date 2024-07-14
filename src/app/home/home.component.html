@@ -1,4 +1,4 @@
-<!-- Intestazione della pagina con titolo e navigazione -->
+<!-- Page header with title and navigation -->
 <div class="navbar-container">
   <h1 class="navbar-title"><a routerLink="/home" class="navbar-link">POKEKOLLECT</a></h1>
   <div class="nav navbar-nav">
@@ -11,14 +11,42 @@
 </div>
 </div>
 
-<!-- Sezione delle Card dei Pokémon -->
-<div class="container mt-4">
+<div class="container-fluid">
   <div class="row">
-    <div *ngFor="let pokemon of pokemons" class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-      <div class="card pokemon-card">
-        <img class="card-img-top" [src]="pokemon.image || 'assets/pokefleeing.webp'" alt="Image of {{ pokemon.name }}">
-        <div class="card-body">
-          <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+    <!-- Random Pokémon -->
+    <div class="col-md-4">
+      <div class="random-pokemon-container text-center">
+        <img *ngIf="randomPokemon; else defaultImage" [src]="randomPokemon.image" alt="Random Pokémon" class="img-fluid random-pokemon-image">
+        <ng-template #defaultImage>
+          <img src="assets/whosePoke.png" alt="Default Pokémon" class="img-fluid random-pokemon-image">
+        </ng-template>
+        <h5 *ngIf="randomPokemon">{{ randomPokemon.name }}</h5> 
+        <div>
+          <button class="btn btn-primary mt-2" (click)="loadRandomPokemon()">Generate Random Pokémon</button>
+          <button class="btn btn-secondary mt-2" *ngIf="randomPokemon" (click)="viewDetails(randomPokemon)">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Placeholder for future content -->
+    <div class="col-md-8">
+      <div class="placeholder-container text-center">
+        <h2>Work in Progress</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pokémon List below -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div *ngFor="let pokemon of pokemons" class="col-6 col-md-3 col-lg-2 mb-4">
+          <div class="card pokemon-card">
+            <img class="card-img-top" [src]="pokemon.image || 'assets/pokefleeing.png'" alt="Image of {{ pokemon.name }}">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
