@@ -14,6 +14,10 @@ export class PokemonService {
     return this.http.get(`${this.baseUrl}`);
   }
 
+  getPokemonById(id: string) {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
   getRandomPokemon(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/random`);
   }

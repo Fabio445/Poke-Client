@@ -6,13 +6,16 @@ import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-import { DexpokeComponent } from './dexpoke/dexpoke.component';
+import { DexPokeComponent } from './dexpoke/dexpoke.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PokeDetailComponent } from './dexpoke/poke-detail/poke-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DexpokeComponent
+    DexPokeComponent,
+    PokeDetailComponent
   ],
   imports: [
     BrowserModule,

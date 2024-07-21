@@ -1,0 +1,92 @@
+/* Styles for the navbar container */
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the navbar title */
+  .navbar-title {
+    margin-bottom: 10px; /* Space between title and navigation */
+    font-size: 36px; /* Title font size */
+  }
+  
+  /* Styles for the navbar links */
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Styles for the navbar navigation */
+  .navbar-nav {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+  }
+  
+  /* Styles for the individual navbar links */
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px; /* Space between links */
+  }
+  
+  /* Styles for the navbar links on hover */
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Global styles for the page container */
+  .container-fluid {
+    padding: 0 20px; /* Adds some space to the sides of the page */
+  }
+
+  /* Styles for the search bar */
+  .search-bar {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+/* Styles for the Pokémon cards in the list */
+.pokemon-card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Styles for the Pokémon cards on hover */
+.pokemon-card:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+/* Styles for the Pokémon card image */
+.card-img-top {
+  width: 96px; /* Fixed width */
+  height: 96px; /* Fixed height */
+  object-fit: cover; /* Maintains image proportions */
+  display: block; /* Sets the image as a block to center it */
+  margin: 0 auto; /* Auto margins to center the image horizontally */
+}
+
+/* Styles for the Pokémon card body */
+.card-body {
+  padding: 0.5rem;
+}
+
+/* Styles for the Pokémon card title */
+.card-title {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+  
