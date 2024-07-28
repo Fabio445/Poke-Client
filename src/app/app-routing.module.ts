@@ -5,6 +5,7 @@ import { SignUpComponent } from './auth/signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { DexPokeComponent } from './dexpoke/dexpoke.component';
 import { PokeDetailComponent } from './dexpoke/poke-detail/poke-detail.component';
+import { SquadsComponent } from './squads/squads.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'home', component: HomeComponent },
   { path: 'dexpoke', component: DexPokeComponent },
-  { path: 'poke-detail/:id', component: PokeDetailComponent }
+  { path: 'poke-detail/:id', component: PokeDetailComponent },
+  { path: 'squads', component: SquadsComponent }
 ];
 
 @NgModule({

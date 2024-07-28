@@ -1,31 +1,33 @@
 <!-- Page header with title and navigation -->
 <div class="navbar-container">
-    <h1 class="navbar-title"><a routerLink="/home" class="navbar-link">POKEKOLLECT</a></h1>
-        <div class="nav navbar-nav">
-            <nav class="nav navbar-nav">
-                <a class="nav-link" routerLink="/dexpoke">DexPoke</a>
-                <a class="nav-link" routerLink="/squads">Squads</a>
-                <a class="nav-link" routerLink="/storepoke">StorePoke</a>
-                <a class="nav-link" routerLink="/kreditstore">Kredit Store</a>
-            </nav>
-        </div>
+  <h1 class="navbar-title"><a routerLink="/home" class="navbar-link">POKEKOLLECT</a></h1>
+      <div class="nav navbar-nav">
+          <nav class="nav navbar-nav">
+              <a class="nav-link" routerLink="/dexpoke">DexPoke</a>
+              <a class="nav-link" routerLink="/squads">Squads</a>
+              <a class="nav-link" routerLink="/storepoke">StorePoke</a>
+              <a class="nav-link" routerLink="/kreditstore">Kredit Store</a>
+          </nav>
+      </div>
 </div>
 
 <div class="search-bar">
-    <input type="text" placeholder="Search Pokémon..." [(ngModel)]="searchTerm" (keyup)="filterPokemons()">
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div *ngFor="let pokemon of filteredPokemons" class="col-6 col-md-3 col-lg-2 mb-4">
-          <div class="card pokemon-card" (click)="showDetails(pokemon)">
-            <img class="card-img-top" [src]="pokemon.image || 'assets/pokefleeing.png'" alt="Image of {{ pokemon.name }}">
-            <div class="card-body">
-              <h5 class="card-title text-center">{{ pokemon.name }}</h5>
-            </div>
+  <input type="text" placeholder="Search Pokémon..." [(ngModel)]="searchTerm" (keyup)="filterPokemons()">
+</div>
+
+<div class="container-fluid">
+<div class="row pokemon-list-container">
+  <div class="col-md-12">
+    <div class="row">
+      <div *ngFor="let pokemon of filteredPokemons" class="col-6 col-md-3 col-lg-2 mb-4">
+        <div class="card pokemon-card" (click)="showDetails(pokemon)">
+          <img class="card-img-top" [src]="pokemon.image || 'assets/pokefleeing.png'" alt="Image of {{ pokemon.name }}">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ pokemon.name }}</h5>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+</div>

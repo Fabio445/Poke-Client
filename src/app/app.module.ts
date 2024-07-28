@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { DexPokeComponent } from './dexpoke/dexpoke.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokeDetailComponent } from './dexpoke/poke-detail/poke-detail.component';
+import { SquadsComponent } from './squads/squads.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DexPokeComponent,
-    PokeDetailComponent
+    PokeDetailComponent,
+    SquadsComponent
   ],
   imports: [
     BrowserModule,
